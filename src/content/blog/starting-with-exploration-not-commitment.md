@@ -4,7 +4,7 @@ description: "Why automation was framed as an option, not a rollout."
 pubDate: 2025-11-14
 ---
 
-Expectations needed careful handling.
+Expectations need careful handling.
 
 Interest from other teams created momentum, but momentum alone wasn’t enough. Committing too early would have locked assumptions in place before understanding had caught up.
 

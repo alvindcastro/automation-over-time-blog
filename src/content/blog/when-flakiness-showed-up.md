@@ -16,7 +16,7 @@ These failures weren’t noise. They were signals.
 
 Ignoring them would have been easy. Treating them as defects in the automation would have been convenient. Instead, they were used as indicators of where structure was missing.
 
-Stability wasn’t blocked by flakiness.
+Flakiness didn’t block stability.
 
 It was blocked by the absence of shared rules.
 

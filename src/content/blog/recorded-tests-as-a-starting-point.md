@@ -10,7 +10,7 @@ It began with recording what already existed.
 
 Recorded tests weren’t seen as a long‑term solution. They were a way to capture behavior quickly, without pretending to fully understand the system upfront.
 
-This approach surfaced value immediately, but also revealed limits just as fast.
+This approach surfaced value immediately but also revealed limits just as fast.
 
 Recordings were brittle. They encoded assumptions implicitly. They worked best when nothing changed — which wasn’t realistic.
 

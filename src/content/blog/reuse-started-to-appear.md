@@ -10,7 +10,7 @@ It emerged.
 
 As automation settled into predictable patterns, parts of the system began to look familiar across different workflows. The same validations applied in more than one place. The same assumptions held.
 
-This wasn’t generalization in the abstract. It was reuse driven by repetition.
+This wasn’t generalization in the abstract. It was reused driven by repetition.
 
 Earlier, attempts to reuse logic would have amplified fragility. Now, reuse reduced duplication.
 

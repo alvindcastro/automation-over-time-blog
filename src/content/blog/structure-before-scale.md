@@ -8,7 +8,7 @@ There was a temptation to add more tests.
 
 Coverage felt like progress. Numbers were easy to track. Expansion felt productive.
 
-But flakiness had made one thing clear: adding more without structure would only multiply existing problems.
+But flakiness had made one thing clear: adding more without a structure would only multiply existing problems.
 
 Structure wasn’t about frameworks or patterns. It was about deciding how tests should behave when things didn’t go as planned.
 

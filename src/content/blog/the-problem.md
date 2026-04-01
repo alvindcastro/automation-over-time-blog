@@ -12,7 +12,7 @@ When run occasionally, manually repeating these checks makes sense.
 
 As they became more frequent, the trade‑offs began to shift.
 
-The issue was not effort alone. It was consistency.
+The issue was not an effort alone. It was consistency.
 
 Manual testing depends on focus. It depends on the person running the test recognizing when something feels slightly off. As repetition increases, that signal becomes harder to detect. Familiarity compresses perception.
 
