@@ -1,0 +1,68 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="About | Automation, Over Time"
+  description="What this project documents and why it exists"
+>
+  <div class="mx-auto max-w-2xl py-8">
+    <h1 class="mb-8 text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">About</h1>
+
+    <div class="prose prose-zinc max-w-none dark:prose-invert">
+      <p>
+        This blog exists to document how a test automation effort evolved over time — not as a
+        greenfield initiative, but inside a long‑lived environment with existing systems,
+        constraints, and expectations.
+      </p>
+
+      <p>
+        The application under test was a large, centralized enterprise platform responsible for core
+        operational records and workflows. It followed a regular upgrade cycle, and each upgrade
+        required careful confirmation that critical paths continued to behave as expected.
+      </p>
+
+      <p>
+        Those confirmations took the form of predictable smoke and sanity checks. They were
+        intentionally conservative by design, focused on validating that unchanged behavior remained
+        unchanged after each upgrade.
+      </p>
+
+      <p>
+        Because those checks were required every cycle and shared across multiple functional areas,
+        they became the natural starting point for automation. Making them executable reduced
+        repetition and produced results that other groups relying on the same platform could trust.
+      </p>
+
+      <p>
+        As that foundation stabilized, the effort gradually widened. Teams using the platform for
+        different operational needs could rely on the same signals, rather than maintaining parallel
+        manual checks. From there, groups supporting connected systems began asking whether the same
+        approach could help manage their own upgrade paths and integrations.
+      </p>
+
+      <p>
+        That expansion was not planned up front. It happened because once the work became
+        repeatable, it was difficult to justify continuing to do similar work by hand elsewhere.
+      </p>
+
+      <p>
+        This blog captures that process: the early assumptions, the missteps, the moments where
+        structure became necessary, and the decisions to introduce new capability only after
+        stability was established.
+      </p>
+
+      <p>
+        All details are intentionally abstracted. Nothing here documents internal systems or speaks
+        on behalf of any institution. The perspective is mine, shaped by the constraints I worked
+        within.
+      </p>
+
+      <p>
+        If you’re interested in my background or other work, that lives elsewhere. You can find it
+        at
+        <a href="https://alvindcastro.github.io/"> alvindcastro.github.io</a>.
+      </p>
+    </div>
+  </div>
+</BaseLayout>
