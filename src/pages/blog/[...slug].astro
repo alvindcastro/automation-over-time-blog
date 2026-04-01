@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BlogPost from '../../layouts/BlogPost.astro';
-import readingTime from 'reading-time'; // Thêm import này nếu chưa có
+import readingTime from 'reading-time'; // Import for reading time calculation
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection('blog');
@@ -12,17 +12,16 @@ export async function getStaticPaths() {
   );
   
   return sortedEntries.map((entry, index) => {
-    // Tính toán readingTime từ nội dung markdown
+    // Calculate reading time from markdown content
     const readingTimeResult = readingTime(entry.body);
-    
-    // Định dạng thời gian đọc thành chuỗi dễ đọc
+
+    // Format reading time into a human-readable string
     let readingTimeStr;
     if (readingTimeResult.minutes < 1) {
-      readingTimeStr = 'Dưới 1 phút đọc';
+      readingTimeStr = 'Under 1 minute read';
     } else {
-      // Làm tròn lên và định dạng thành "X phút đọc"
       const minutes = Math.ceil(readingTimeResult.minutes);
-      readingTimeStr = `${minutes} phút đọc`;
+      readingTimeStr = `${minutes} minute read`;
     }
     
     return {
@@ -41,7 +40,7 @@ export async function getStaticPaths() {
 const { entry, nextPost, prevPost, readingTimeValue, readingTimeStats } = Astro.props;
 const { Content } = await entry.render();
 
-// Ghi đè readingTime từ frontmatter nếu có, nếu không thì sử dụng giá trị đã tính
+// Override reading time from frontmatter if provided; otherwise use calculated value
 const finalReadingTime = entry.data.readingTime || readingTimeValue;
 ---
 
@@ -151,7 +150,7 @@ const finalReadingTime = entry.data.readingTime || readingTimeValue;
       }
     });
   }
-  
+
   // Handle SPA transitions for blog post navigation
   function setupSPATransitions() {
     // Handle prev/next navigation links
