@@ -1,19 +1,19 @@
 ---
 title: "When Automation Becomes Legacy"
 description: "Recognizing the point where improving an old solution no longer helps."
-pubDate: 2025-04-09
+pubDate: 2025-06-04
 ---
 
 Legacy is not limited to production systems.
 
 Automation can become legacy too.
 
-Over time, early design decisions solidify into assumptions. What was once flexible becomes load‑bearing. Changes require workarounds instead of clean adjustments.
+Over time, early design decisions solidified into assumptions. What was once flexible became load‑bearing. Changes required workarounds instead of clean adjustments.
 
-Eventually, the question shifts.
+Eventually, the question shifted.
 
-It’s no longer “How do we improve this?”  
-It becomes “Does continuing to improve this actually move us forward?”
+It was no longer “How do we improve this?”
+It became “Does continuing to improve this actually move us forward?”
 
 That was the inflection point.
 

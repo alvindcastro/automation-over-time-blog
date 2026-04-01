@@ -1,7 +1,7 @@
 ---
 title: "The Cost of Repeating the Same Checks"
 description: "Why manual smoke and sanity testing stopped scaling."
-pubDate: 2025-04-05
+pubDate: 2025-05-21
 ---
 
 Repetition changes the nature of work.
@@ -10,7 +10,7 @@ Smoke and sanity tests are designed to be boring. They exist to confirm that not
 
 When run occasionally, manually repeating these checks makes sense.
 
-When run regularly, the trade‑offs shift.
+As they became more frequent, the trade‑offs began to shift.
 
 The issue was not effort alone. It was consistency.
 
