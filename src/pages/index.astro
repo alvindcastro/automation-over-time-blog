@@ -98,7 +98,7 @@ const allTags = [...new Set(allPosts.flatMap(post => post.data.tags || []))].sli
             
             <div class="relative z-10 flex items-center flex-wrap gap-x-3 sm:gap-x-4 gap-y-2 text-xs text-zinc-500 dark:text-zinc-400 theme-transition-color justify-center sm:justify-start w-full">
               <time datetime={post.data.pubDate.toISOString()} class="font-medium">
-                <FormattedDate date={post.data.pubDate} format="long" />
+                <FormattedDate date={post.data.pubDate} />
               </time>
               <span class="relative z-10 rounded-full bg-zinc-100 dark:bg-zinc-800 px-2 sm:px-3 py-1 sm:py-1.5 font-medium text-zinc-600 dark:text-zinc-300 theme-transition-all">
                 {post.data.readingTime || `${Math.ceil(post.body.length / 2000)} min read`}
@@ -231,35 +231,9 @@ const allTags = [...new Set(allPosts.flatMap(post => post.data.tags || []))].sli
     // Set initial value
     setVh();
     
-    // Update on resize and scroll to prevent content shifting
+    // Update on resize to prevent content shifting
     window.addEventListener('resize', setVh);
-    
-    // Use a debounced scroll handler to prevent performance issues
-    let scrollTimeout;
-    window.addEventListener('scroll', () => {
-      if (scrollTimeout) {
-        window.cancelAnimationFrame(scrollTimeout);
-      }
-      
-      scrollTimeout = window.requestAnimationFrame(() => {
-        // Lock width during scroll
-        document.body.style.width = '100%';
-        document.body.style.overflowX = 'hidden';
-      });
-    });
-    
-    // Fix for iOS Safari address bar height changes
-    if (/iPhone|iPad|iPod/.test(navigator.userAgent)) {
-      // Force the layout to use the initial viewport size
-      document.documentElement.style.setProperty('--initial-vh', `${window.innerHeight * 0.01}px`);
-      
-      // Apply fixed height to sections to prevent resizing
-      const sections = document.querySelectorAll('section');
-      sections.forEach(section => {
-        section.style.width = '100%';
-      });
-    }
-    
+
     // Improved theme change handler that preserves scroll position and provides smoother transitions
     document.addEventListener('themeChanged', () => {
       // Store current scroll position
@@ -308,20 +282,6 @@ const allTags = [...new Set(allPosts.flatMap(post => post.data.tags || []))].sli
             behavior: 'auto' // Use 'auto' to prevent animation
           });
         }, 10);
-      }
-    });
-    
-    // Fix theme inconsistency issues by checking theme on visibility change
-    document.addEventListener('visibilitychange', () => {
-      if (document.visibilityState === 'visible') {
-        const storedTheme = localStorage.getItem('theme');
-        const currentThemeIsDark = document.documentElement.classList.contains('dark');
-        
-        if (storedTheme === 'dark' && !currentThemeIsDark) {
-          document.documentElement.classList.add('dark');
-        } else if (storedTheme === 'light' && currentThemeIsDark) {
-          document.documentElement.classList.remove('dark');
-        }
       }
     });
     

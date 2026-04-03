@@ -19,7 +19,6 @@ const tagObjects = tags.map(tag => {
   };
 });
 
-// Sắp xếp tag theo số lượng bài viết (nhiều nhất lên đầu)
 const sortedTags = [...tagObjects].sort((a, b) => b.count - a.count);
 ---
 
@@ -117,11 +116,6 @@ const sortedTags = [...tagObjects].sort((a, b) => b.count - a.count);
         viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
       }
       
-      // Fix for horizontal overflow
-      document.body.style.overflowX = 'hidden';
-      document.documentElement.style.overflowX = 'hidden';
-      document.documentElement.style.width = '100%';
-      document.body.style.width = '100%';
     };
     
     fixViewportWidth();

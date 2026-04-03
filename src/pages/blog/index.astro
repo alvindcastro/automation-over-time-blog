@@ -1,8 +1,9 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import FormattedDate from '../../components/FormattedDate.astro';
 
-const allPosts = await getCollection('blog') || [];
+const allPosts = await getCollection('blog');
 const sortedPosts = allPosts.sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
@@ -66,13 +67,7 @@ const allTags = [...new Set(sortedPosts.flatMap(post => post.data.tags || []))];
                   <span class="font-medium uppercase tracking-wider">Featured</span>
                   <span class="h-px w-6 sm:w-8 bg-zinc-300 dark:bg-zinc-700"></span>
                   {sortedPosts[0].data.pubDate && (
-                    <time datetime={sortedPosts[0].data.pubDate.toISOString()}>
-                      {sortedPosts[0].data.pubDate.toLocaleDateString('en-US', { 
-                        year: 'numeric', 
-                        month: 'long', 
-                        day: 'numeric' 
-                      })}
-                    </time>
+                    <FormattedDate date={sortedPosts[0].data.pubDate} />
                   )}
                 </div>
                 
@@ -286,7 +281,6 @@ const allTags = [...new Set(sortedPosts.flatMap(post => post.data.tags || []))];
 </style>
 
 <script>
-  // Script không thay đổi - giữ nguyên chức năng
   document.addEventListener('DOMContentLoaded', () => {
     const backToTopButton = document.getElementById('back-to-top');
     

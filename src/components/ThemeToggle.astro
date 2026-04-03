@@ -71,84 +71,67 @@
     
     // Toggle theme when any theme toggle button is clicked
     themeToggles.forEach(toggle => {
-      // Add event listeners for both click and touch events
-      ['click', 'touchend'].forEach(eventType => {
-        toggle.addEventListener(eventType, (e) => {
-          e.preventDefault();
-          e.stopPropagation();
-          
-          // Get click/touch position for radial animation
-          let x, y;
-          if (e.type === 'touchend' && e.changedTouches && e.changedTouches[0]) {
-            const rect = toggle.getBoundingClientRect();
-            x = e.changedTouches[0].clientX - rect.left;
-            y = e.changedTouches[0].clientY - rect.top;
+      toggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        const rect = toggle.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        // Set the position variables for the radial gradient
+        document.documentElement.style.setProperty('--x', `${x}px`);
+        document.documentElement.style.setProperty('--y', `${y}px`);
+
+        // Get the overlay element
+        const overlay = document.querySelector('.theme-switch-overlay');
+
+        // Determine the new theme
+        const isDark = document.documentElement.classList.contains('dark');
+        const newTheme = isDark ? 'light' : 'dark';
+
+        // Show overlay during transition
+        if (overlay) {
+          overlay.style.backgroundColor = newTheme === 'dark' ? 'rgba(24, 24, 27, 0.3)' : 'rgba(255, 255, 255, 0.3)';
+          overlay.style.opacity = '1';
+        }
+
+        // Add transition class
+        document.documentElement.classList.add('theme-switching');
+
+        // Add ripple effect
+        const ripple = document.createElement('span');
+        ripple.className = 'theme-toggle-ripple';
+        toggle.appendChild(ripple);
+
+        // Toggle dark mode with a slight delay to allow overlay to appear
+        setTimeout(() => {
+          if (isDark) {
+            document.documentElement.classList.remove('dark');
           } else {
-            const rect = toggle.getBoundingClientRect();
-            x = e.clientX - rect.left;
-            y = e.clientY - rect.top;
+            document.documentElement.classList.add('dark');
           }
-          
-          // Set the position variables for the radial gradient
-          document.documentElement.style.setProperty('--x', `${x}px`);
-          document.documentElement.style.setProperty('--y', `${y}px`);
-          
-          // Get the overlay element
-          const overlay = document.querySelector('.theme-switch-overlay');
-          
-          // Determine the new theme
-          const isDark = document.documentElement.classList.contains('dark');
-          const newTheme = isDark ? 'light' : 'dark';
-          
-          // Show overlay during transition
-          if (overlay) {
-            overlay.style.backgroundColor = newTheme === 'dark' ? 'rgba(24, 24, 27, 0.3)' : 'rgba(255, 255, 255, 0.3)';
-            overlay.style.opacity = '1';
-          }
-          
-          // Add transition class
-          document.documentElement.classList.add('theme-switching');
-          
-          // Add ripple effect
-          const ripple = document.createElement('span');
-          ripple.className = 'theme-toggle-ripple';
-          toggle.appendChild(ripple);
-          
-          // Force a reflow to ensure all elements update
-          document.body.offsetHeight;
-          
-          // Toggle dark mode with a slight delay to allow overlay to appear
+
+          // Store the preference
+          localStorage.setItem('theme', newTheme);
+
+          // Dispatch a custom event for other components to react to
+          document.dispatchEvent(new CustomEvent('themeChanged', {
+            detail: { isDark: newTheme === 'dark' }
+          }));
+
+          // Hide overlay after theme has changed
           setTimeout(() => {
-            if (isDark) {
-              document.documentElement.classList.remove('dark');
-            } else {
-              document.documentElement.classList.add('dark');
+            if (overlay) {
+              overlay.style.opacity = '0';
             }
-            
-            // Store the preference
-            localStorage.setItem('theme', newTheme);
-            
-            // Dispatch a custom event for other components to react to
-            document.dispatchEvent(new CustomEvent('themeChanged', { 
-              detail: { isDark: newTheme === 'dark' } 
-            }));
-            
-            // Force another reflow to ensure all elements update
-            document.body.offsetHeight;
-            
-            // Hide overlay after theme has changed
-            setTimeout(() => {
-              if (overlay) {
-                overlay.style.opacity = '0';
-              }
-              
-              // Remove transition class after animation completes
-              document.documentElement.classList.remove('theme-switching');
-              ripple.remove();
-            }, 300);
-          }, 50);
-        }, { passive: false });
-      });
+
+            // Remove transition class after animation completes
+            document.documentElement.classList.remove('theme-switching');
+            ripple.remove();
+          }, 300);
+        }, 50);
+      }, { passive: false });
       
       // Add touch feedback
       toggle.addEventListener('touchstart', () => {

@@ -28,8 +28,8 @@ export async function getStaticPaths() {
       params: { slug: entry.slug },
       props: { 
         entry,
-        readingTimeValue: readingTimeStr, // Truyền chuỗi đã định dạng
-        readingTimeStats: readingTimeResult, // Truyền toàn bộ thông tin thống kê
+        readingTimeValue: readingTimeStr,
+        readingTimeStats: readingTimeResult,
         nextPost: index > 0 ? sortedEntries[index - 1] : null,
         prevPost: index < sortedEntries.length - 1 ? sortedEntries[index + 1] : null
       },

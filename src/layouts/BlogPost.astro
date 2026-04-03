@@ -25,34 +25,18 @@ try {
   canonicalURL = new URL('https://example.com');
 }
 
-const slug = Astro.url.pathname.split('/').filter(Boolean).pop() || ''; // Ensure slug is a string
-
-// Xử lý heroImage an toàn hơn - hỗ trợ cả URL tuyệt đối và đường dẫn tương đối
 let heroImageUrl = null;
 if (heroImage) {
   try {
-    // Kiểm tra nếu là URL đầy đủ
     if (heroImage.startsWith('http')) {
       heroImageUrl = heroImage;
-    } 
-    // Kiểm tra nếu là đường dẫn tương đối
-    else if (heroImage.startsWith('/')) {
-      // Nếu Astro.site tồn tại, sử dụng nó làm cơ sở
-      if (Astro.site) {
-        heroImageUrl = new URL(heroImage, Astro.site).toString();
-      } 
-      // Nếu không, sử dụng đường dẫn tương đối như đã cung cấp
-      else {
-        heroImageUrl = heroImage;
-      }
-    }
-    // Trường hợp khác
-    else {
+    } else if (heroImage.startsWith('/')) {
+      heroImageUrl = Astro.site ? new URL(heroImage, Astro.site).toString() : heroImage;
+    } else {
       heroImageUrl = heroImage;
     }
   } catch (error) {
     console.error(`Error processing heroImage: ${heroImage}`, error);
-    // Sử dụng đường dẫn gốc nếu có lỗi
     heroImageUrl = heroImage;
   }
 }
@@ -125,14 +109,12 @@ if (heroImage) {
     
     // Ensure consistent code block styling
     function updateCodeBlockStyles() {
+      const isDark = document.documentElement.classList.contains('dark');
       document.querySelectorAll('pre').forEach(pre => {
-        // Force the background color with !important for both light and dark mode
-        pre.setAttribute('style', 'background-color: #1e293b !important');
-        
-        // Also apply to any nested code elements
+        pre.setAttribute('style', isDark ? 'background-color: #1e293b !important' : '');
         const codeElements = pre.querySelectorAll('code');
         codeElements.forEach(code => {
-          code.setAttribute('style', 'background-color: transparent !important; color: #e5e7eb !important;');
+          code.setAttribute('style', isDark ? 'background-color: transparent !important; color: #e5e7eb !important;' : '');
         });
       });
     }
@@ -165,8 +147,6 @@ if (heroImage) {
       contentObserver.disconnect();
     });
     
-    // Remove the parallax effect for hero image
-    
     // Handle prev/next navigation links
     const navLinks = document.querySelectorAll('.blog-nav-link');
     navLinks.forEach(link => {
@@ -186,25 +166,25 @@ if (heroImage) {
     // Animate headings when they enter the viewport
     const animateHeadings = () => {
       const headings = document.querySelectorAll('article h2, article h3');
-      
-      const observer = new IntersectionObserver((entries) => {
+
+      const intersectionObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             entry.target.classList.add('heading-visible');
-            observer.unobserve(entry.target);
+            intersectionObserver.unobserve(entry.target);
           }
         });
       }, {
         threshold: 0.2,
         rootMargin: '0px 0px -100px 0px'
       });
-      
+
       headings.forEach(heading => {
         heading.classList.add('heading-animated');
-        observer.observe(heading);
+        intersectionObserver.observe(heading);
       });
-      
-      return observer;
+
+      return intersectionObserver;
     };
     
     // Initialize heading animations
@@ -290,16 +270,6 @@ if (heroImage) {
           const languageBadge = document.createElement('div');
           languageBadge.className = 'language-badge';
           languageBadge.textContent = `\`\`\`${language}`;
-          languageBadge.style.position = 'absolute';
-          languageBadge.style.bottom = '0.5rem';
-          languageBadge.style.right = '0.5rem';
-          languageBadge.style.fontSize = '0.7rem';
-          languageBadge.style.padding = '0.1rem 0.3rem';
-          languageBadge.style.backgroundColor = 'rgba(75, 85, 99, 0.7)';
-          languageBadge.style.color = '#e5e7eb';
-          languageBadge.style.borderRadius = '0.25rem';
-          languageBadge.style.fontFamily = 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace';
-          languageBadge.style.zIndex = '10';
           codeBlock.parentElement.appendChild(languageBadge);
         }
       });
@@ -408,6 +378,19 @@ if (heroImage) {
     }
   }
   
+  .language-badge {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    font-size: 0.7rem;
+    padding: 0.1rem 0.3rem;
+    background-color: rgba(75, 85, 99, 0.7);
+    color: #e5e7eb;
+    border-radius: 0.25rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    z-index: 10;
+  }
+
   /* Rest of the styles remain unchanged... */
 </style>
 
