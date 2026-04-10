@@ -1,12 +1,8 @@
 # Automation, Over Time
 
-This repository contains a personal writing project that documents how a test automation
-effort evolved over time under real‑world constraints.
-
-The work described here took place in the context of a public post‑secondary institution.
-That environment shaped priorities, risk tolerance, and long‑term expectations, but only
-public‑appropriate information appears in this project. Everything here reflects my own
-learnings and experiences gathered over several years of system evolution.
+This site reflects my personal learnings and experiences. References to work performed in a 
+public post-secondary environment are intentionally abstracted, and nothing here 
+represents the systems, practices, or positions of any institution.
 
 ---
 
