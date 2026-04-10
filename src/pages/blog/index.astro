@@ -351,9 +351,10 @@ const allTags = [...new Set(sortedPosts.flatMap(post => post.data.tags || []))];
   // SPA transition handling
   function setupSPATransitions() {
     // Handle all blog post links for SPA transitions
-    document.querySelectorAll('a[href^="/blog/"]').forEach(link => {
+    document.querySelectorAll('a[href*="/blog/"]').forEach(link => {
       // Skip links that are anchor links or already processed
-      if (link.getAttribute('href').includes('#') || link.hasAttribute('data-spa-handled')) {
+      const href = link.getAttribute('href');
+      if (href.includes('#') || link.hasAttribute('data-spa-handled')) {
         return;
       }
       
