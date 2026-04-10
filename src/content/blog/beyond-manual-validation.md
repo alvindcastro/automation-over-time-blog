@@ -25,6 +25,12 @@ Our initial implementation prioritized clarity and consistency, focusing specifi
 1.  **Smoke Tests**: High-level checks to ensure the system was "up" and the core infrastructure was responding.
 2.  **Sanity Tests**: Deeper validation of critical operational paths, ensuring that our most common workflows remained intact.
 
+### The Development Process: Solo Focus, Team Oversight
+
+While I led the technical implementation as a solo developer, the project was never an island. It was built within a collaborative engineering culture that prioritized feedback and quality. Every architectural decision and major script was subjected to rigorous code reviews and feedback loops with the wider team.
+
+This balance of individual technical ownership and collective oversight ensured that the automation was not just a personal project, but a robust institutional asset. It allowed for rapid iteration while maintaining the high standards required for an enterprise environment. By leveraging the team's collective experience through feedback, we avoided common pitfalls and built a solution that was both innovative and maintainable.
+
 ### The Identity Hurdle: MFA Integration
 
 One of the most significant early wins was integrating **Multi-Factor Authentication (MFA)** into the automated flow. In an institutional environment where security is non-negotiable, automation often stops at the login screen. By solving the MFA challenge within our Playwright scripts, we unlocked the ability to run truly end-to-end tests without manual intervention.
