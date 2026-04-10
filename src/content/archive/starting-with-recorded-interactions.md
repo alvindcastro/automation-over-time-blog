@@ -1,7 +1,9 @@
 ---
-title: "Recorded Tests as a Starting Point"
+title: "Starting With Recorded Interactions"
 description: "Why pragmatism won over elegance in the early rebuild."
 pubDate: 2025-07-09
+phase: 3
+visibility: "Public"
 ---
 
 The rebuild didn’t begin with ideal abstractions.
@@ -12,7 +14,7 @@ Recorded tests weren’t seen as a long‑term solution. They were a way to capt
 
 This approach surfaced value immediately but also revealed limits just as fast.
 
-Recordings were brittle. They encoded assumptions implicitly. They worked best when nothing changed — which wasn’t realistic.
+Recordings were brittle. They encoded assumptions implicitly. They worked best when nothing changed - which wasn’t realistic.
 
 Still, they served an important purpose.
 

@@ -12,7 +12,7 @@ This shift didn’t happen because coverage increased or new features were added
 
 Runs completed without surprise. Failures were understandable. Signals aligned with expectations.
 
-Automation started to resemble infrastructure — not because it was invisible, but because it was stable.
+Automation started to resemble infrastructure - not because it was invisible, but because it was stable.
 
 This wasn’t an accident.
 

@@ -10,7 +10,7 @@ There were always more scenarios that could be automated. More coverage that cou
 
 Boundaries mattered more here than earlier.
 
-Some checks remained manual. Others were deliberately excluded. These decisions weren’t about technical limitation — they were about responsibility.
+Some checks remained manual. Others were deliberately excluded. These decisions weren’t about technical limitation - they were about responsibility.
 
 Automation was trusted because its scope was understood.
 

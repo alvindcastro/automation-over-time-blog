@@ -25,5 +25,3 @@ This reset came with different priorities:
 - structure over convenience
 
 That decision set the tone for everything that followed.
-
-This blog begins at that reset.

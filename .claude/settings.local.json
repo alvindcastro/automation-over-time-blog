@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(for f:*)",
+      "Bash(do echo:*)",
+      "Read(//c/Users/decastroa/WebstormProjects/automation-over-time-blog/**)",
+      "Bash(done)",
+      "Bash(grep:*)"
+    ]
+  }
+}

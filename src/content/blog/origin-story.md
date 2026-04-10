@@ -16,7 +16,7 @@ Gradually, the repetition became harder to ignore.
 
 Manual verification requires attention and context. It assumes the person running the test will notice subtle differences even after seeing the same screens again and again. Over time, that assumption weakens.
 
-Automation didn’t present itself as an innovation. It presented itself as a relief.
+Automation didn’t present itself as innovation. It presented itself as relief.
 
 The initial goal wasn’t to build a platform or framework. It was simply to avoid re‑doing the same careful work by hand every time the system changed.
 

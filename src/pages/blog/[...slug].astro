@@ -4,7 +4,7 @@ import BlogPost from '../../layouts/BlogPost.astro';
 import readingTime from 'reading-time'; // Import for reading time calculation
 
 export async function getStaticPaths() {
-  const blogEntries = await getCollection('blog');
+  const blogEntries = await getCollection('blog', ({ id }) => !id.startsWith('archived/'));
   
   // Sort entries by date for better next/prev navigation
   const sortedEntries = [...blogEntries].sort(

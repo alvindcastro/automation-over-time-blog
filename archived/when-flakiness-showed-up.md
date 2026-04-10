@@ -1,6 +1,6 @@
 ---
 title: "When Flakiness Showed Up"
-description: "Why instability was expected—and useful."
+description: "Why instability was expected-and useful."
 pubDate: 2025-07-18
 ---
 

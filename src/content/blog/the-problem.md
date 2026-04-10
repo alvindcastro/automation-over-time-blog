@@ -12,7 +12,7 @@ When run occasionally, manually repeating these checks makes sense.
 
 As they became more frequent, the trade‑offs began to shift.
 
-The issue was not an effort alone. It was consistency.
+The issue was not effort alone. It was consistency.
 
 Manual testing depends on focus. It depends on the person running the test recognizing when something feels slightly off. As repetition increases, that signal becomes harder to detect. Familiarity compresses perception.
 
@@ -23,3 +23,4 @@ At that point, automation is no longer about speed. It becomes about removing av
 Manual testing still had a role. But it was no longer the right tool for repeatedly confirming known behavior.
 
 Automation wasn’t meant to replace judgment. It was meant to preserve it for the work that actually required it.
+``

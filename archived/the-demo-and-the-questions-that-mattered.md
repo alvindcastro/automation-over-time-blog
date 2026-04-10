@@ -1,6 +1,6 @@
 ---
 title: "The Demo and the Questions That Mattered"
-description: "What senior leaders asked — and what they did not."
+description: "What senior leaders asked - and what they did not."
 pubDate: 2026-02-17
 ---
 

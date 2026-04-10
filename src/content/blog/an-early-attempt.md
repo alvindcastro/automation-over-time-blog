@@ -20,4 +20,5 @@ Changing it carried risk. Fixes produced regressions. The effort required to kee
 
 That experience mattered.
 
-Not all automation fails because it stops working. Some fail because it becomes too expensive to keep alive.
+Not all automation fails because it stops working. Some fails because it becomes too expensive to keep alive.
+``

@@ -1,6 +1,6 @@
 ---
 title: "Ending Phase Five with Clarity"
-description: "What visibility changed — and what it deliberately did not."
+description: "What visibility changed - and what it deliberately did not."
 pubDate: 2026-02-23
 ---
 

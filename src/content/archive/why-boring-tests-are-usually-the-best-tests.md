@@ -1,12 +1,14 @@
 ---
-title: "When Automation Stayed Boring"
+title: "Why Boring Tests Are Usually the Best Tests"
 description: "Why boredom became a sign of success."
-pubDate: 2025-10-06
+pubDate: 2026-03-25
+phase: 9
+visibility: "Public"
 ---
 
 Eventually, automation faded into the background.
 
-Not because it stopped working — but because it stopped being discussed.
+Not because it stopped working - but because it stopped being discussed.
 
 Runs became routine. Results were expected. Attention shifted elsewhere.
 
