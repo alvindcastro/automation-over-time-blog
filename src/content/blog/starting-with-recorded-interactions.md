@@ -1,7 +1,9 @@
 ---
-title: "Recorded Tests as a Starting Point"
+title: "Starting With Recorded Interactions"
 description: "Why pragmatism won over elegance in the early rebuild."
 pubDate: 2025-07-09
+phase: 3
+visibility: "Public"
 ---
 
 The rebuild didn’t begin with ideal abstractions.

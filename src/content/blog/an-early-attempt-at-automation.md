@@ -2,6 +2,8 @@
 title: "An Early Attempt at Automation"
 description: "What an early solution revealed about longevity and maintenance."
 pubDate: 2025-05-28
+phase: 2
+visibility: "Public"
 ---
 
 This was not the first attempt to automate these checks.
@@ -20,5 +22,4 @@ Changing it carried risk. Fixes produced regressions. The effort required to kee
 
 That experience mattered.
 
-Not all automation fails because it stops working. Some fails because it becomes too expensive to keep alive.
-``
+Not all automation fails because it stops working. Some fail because it becomes too expensive to keep alive.

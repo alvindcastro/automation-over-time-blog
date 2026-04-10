@@ -1,7 +1,9 @@
 ---
-title: "When Automation Became a Shared Tool"
+title: "Treating Test Automation as Shared Infrastructure"
 description: "How automation moved from an individual effort to a collective capability."
 pubDate: 2025-12-05
+phase: 6
+visibility: "Hybrid"
 ---
 
 At some point, ownership shifted.

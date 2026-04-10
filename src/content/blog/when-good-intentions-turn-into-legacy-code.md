@@ -1,7 +1,9 @@
 ---
-title: "When Automation Becomes Legacy"
+title: "When Good Intentions Turn Into Legacy Code"
 description: "Recognizing the point where improving an old solution no longer helps."
 pubDate: 2025-06-04
+phase: 2
+visibility: "Public"
 ---
 
 Legacy is not limited to production systems.
@@ -25,3 +27,5 @@ This reset came with different priorities:
 - structure over convenience
 
 That decision set the tone for everything that followed.
+
+This blog begins at that reset.

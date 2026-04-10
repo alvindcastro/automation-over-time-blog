@@ -1,7 +1,9 @@
 ---
-title: "Automation as Infrastructure"
+title: "Treating Tests as Long‑Lived Infrastructure"
 description: "When automation stopped being an experiment and started being relied on."
-pubDate: 2025-08-11
+pubDate: 2026-03-05
+phase: 9
+visibility: "Public"
 ---
 
 At some point, the language changed.

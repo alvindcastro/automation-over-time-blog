@@ -1,7 +1,9 @@
 ---
-title: "What Other Teams Actually Needed"
+title: "Designing Automation That Others Can Build On"
 description: "Learning that automation meant different things to different groups."
 pubDate: 2025-11-03
+phase: 6
+visibility: "Public"
 ---
 
 Early conversations revealed a gap.

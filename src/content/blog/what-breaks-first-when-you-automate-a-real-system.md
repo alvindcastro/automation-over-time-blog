@@ -1,7 +1,9 @@
 ---
-title: "When Flakiness Showed Up"
+title: "What Breaks First When You Automate a Real System"
 description: "Why instability was expected-and useful."
 pubDate: 2025-07-18
+phase: 4
+visibility: "Public"
 ---
 
 Flakiness appeared early.

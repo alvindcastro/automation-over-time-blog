@@ -1,7 +1,9 @@
 ---
-title: "Where Automation Restarted"
+title: "Knowing When to Restart Instead of Refactor"
 description: "Deciding what not to carry forward after the reset."
 pubDate: 2025-06-30
+phase: 2
+visibility: "Public"
 ---
 
 The reset created space, but it didn’t answer everything.

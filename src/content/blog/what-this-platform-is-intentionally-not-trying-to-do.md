@@ -1,7 +1,9 @@
 ---
-title: "Ending Phase Five with Clarity"
+title: "What This Platform Is Intentionally Not Trying to Do"
 description: "What visibility changed - and what it deliberately did not."
-pubDate: 2026-02-23
+pubDate: 2026-05-25
+phase: 12
+visibility: "Public"
 ---
 
 Visibility altered context without changing direction.

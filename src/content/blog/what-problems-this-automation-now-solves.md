@@ -1,7 +1,9 @@
 ---
-title: "Preparing to Show the Work"
+title: "What Problems This Automation Now Solves"
 description: "Deciding what to demonstrate - and what to leave out."
-pubDate: 2025-12-15
+pubDate: 2026-05-15
+phase: 12
+visibility: "Public"
 ---
 
 Preparation mattered more than the demo itself.

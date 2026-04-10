@@ -1,7 +1,9 @@
 ---
-title: "Structure Before Scale"
+title: "When Early Automation Stops Scaling"
 description: "Why adding more tests was not the next move."
-pubDate: 2025-07-28
+pubDate: 2026-01-02
+phase: 7
+visibility: "Public"
 ---
 
 There was a temptation to add more tests.

@@ -1,7 +1,9 @@
 ---
-title: "When Others Started Asking"
+title: "When One Team’s Solution Becomes a Shared Concern"
 description: "How interest emerged beyond the original scope."
 pubDate: 2025-10-20
+phase: 6
+visibility: "Public"
 ---
 
 The shift was subtle.
