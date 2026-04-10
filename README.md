@@ -3,8 +3,8 @@
 This repository contains a personal writing project that documents how a test automation
 effort evolved over time under real‑world constraints.
 
-The work described here took place in the context of a public post‑secondary institution.
-That environment shaped priorities, risk tolerance, and long‑term expectations, but only
+The work described here took place in a professional enterprise context. That
+environment shaped priorities, risk tolerance, and long‑term expectations, but only
 public‑appropriate information appears in this project. Everything here reflects my own
 learnings and experiences gathered over several years of system evolution.
 
@@ -25,7 +25,7 @@ but on **how decisions changed over time** as the system matured.
 
 - It is **not** a tutorial or how‑to guide
 - It is **not** documentation of any internal system
-- It does **not** represent institutional strategy or positions
+- It does **not** represent any organization's strategy or positions
 - It does **not** expose configurations, workflows, or environments
 
 Details are intentionally abstracted to focus on patterns and trade‑offs rather than
